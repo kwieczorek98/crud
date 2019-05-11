@@ -25,7 +25,7 @@
                 <table class="table table-borderless table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Surname</th>
                         <th scope="col">Job</th>
@@ -34,11 +34,16 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <?php
+                        require_once 'includes/show.php';
+
+                        foreach($persons as $person):
+                    ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Web Developer</td>
+                            <th scope="row"><?= $person->id; ?></th>
+                            <td><?= $person->name; ?></td>
+                            <td><?= $person->surname; ?></td>
+                            <td><?= $person->job; ?></td>
                             <td>
                                 <button class="btn btn-warning">Edit</button>
                             </td>
@@ -46,6 +51,9 @@
                                 <button class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
+                    <?php
+                        endforeach;
+                    ?>
                     </tbody>
                 </table>
             </div>
