@@ -3,19 +3,19 @@
 ?>
 <body>
     <h1 class="text-center p-5">CRUD | PHP</h1>
-        <form class="pb-5" action="" method="post">
+        <form class="pb-5" action="includes/create.php" method="post">
             <div class="container">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
                 </div>
                 <div class="form-group">
-                    <label for="Surname">Surname</label>
-                    <input type="text" class="form-control" id="Surname" placeholder="Enter surname">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter surname">
                 </div>
                 <div class="form-group">
                     <label for="job">Job</label>
-                    <input type="text" class="form-control" id="job" placeholder="Enter job">
+                    <input type="text" class="form-control" id="job" name="job" placeholder="Enter job">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
