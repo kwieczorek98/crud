@@ -45,10 +45,10 @@
                             <td><?= $person->surname; ?></td>
                             <td><?= $person->job; ?></td>
                             <td>
-                                <button class="btn btn-warning">Edit</button>
+                                <a class="btn btn-warning" href="includes/edit.php?id=<?= $person->id ?>">Edit</a>
                             </td>
                             <td>
-                                <button class="btn btn-danger">Delete</button>
+                                <a class="btn btn-danger text-white" href="includes/delete.php?id=<?= $person->id ?>">Delete</a>
                             </td>
                         </tr>
                     <?php
