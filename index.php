@@ -1,23 +1,37 @@
 <?php
-    require_once 'includes/header.php';
+    require 'includes/header.php';
+
 ?>
 <body>
     <h1 class="text-center p-5">CRUD | PHP</h1>
-        <form class="pb-5" action="includes/create.php" method="post">
+
+                <?php
+
+                if(isset($_GET['submit']) == "emptyname")
+                    {
+                        $valid = 'is-invalid';
+                    }
+
+
+
+
+                ?>
+
+        <form class="pb-5" action="includes/create.php" method="post" name="form">
             <div class="container">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                    <input type="text" class="form-control <?= $valid; ?>" id="name" name="name" placeholder="Enter name">
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname</label>
-                    <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter surname">
+                    <input type="text" class="form-control <?= $valid; ?>" id="surname" name="surname" placeholder="Enter surname">
                 </div>
                 <div class="form-group">
                     <label for="job">Job</label>
-                    <input type="text" class="form-control" id="job" name="job" placeholder="Enter job">
+                    <input type="text" class="form-control <?= $valid; ?>" id="job" name="job" placeholder="Enter job">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
             </div>
         </form>
         <div class="container">
@@ -35,7 +49,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        require_once 'includes/show.php';
+                        require 'includes/show.php';
 
                         foreach($persons as $person):
                     ?>
@@ -59,5 +73,5 @@
             </div>
         </div>
 <?php
-    require_once 'includes/footer.php';
+    require 'includes/footer.php';
 ?>

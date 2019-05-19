@@ -1,7 +1,7 @@
 <?php
 
     require 'db.php';
-    require_once 'header.php';
+    require 'header.php';
 
     $id = $_GET['id'];
 
